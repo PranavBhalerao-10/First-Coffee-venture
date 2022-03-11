@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+.dashboard {
+  background-image: url("../../Assets/images.jpg");
+  padding-top: 20px;
+  height: 100vh;
+}
+.add_post {
+  display: flex;
+  padding-top: 20px;
+  flex-direction: column;
+  width: 60vw;
+  align-items: center;
+  background-color: white;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 10px 8px #888888;
+  background-image: url("../../Assets/background-with-wavy-abstract-form-blue-vector-20700900.jpg");
+  background-size: cover;
+}
+
+.add_post input {
+  width: 50vw;
+}
+
+.add_post textarea {
+  width: 50vw;
+}
+
+.add_post label {
+  text-align: center;
+}

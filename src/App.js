@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Dashboard from './components/Dashboard/Dashboard.component'
+import HomePage from './components/Homepage/HomePage.component'
+import Login from './components/login/login.component'
+import Register from './components/register/register.component.jsx'
 
-function App() {
+
+const App = () => {
+  const [itemList, setItemList] = useState([])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Routes >
+          <Route path="/" exact element={<HomePage itemList={itemList} />} />
+          <Route path="/login" exact element={<Login />} />
+          <Route path="/register" exact element={<Register />} />
+          <Route path="/dashboard" exact element={<Dashboard setItemList={setItemList} />} />
+        </Routes>
+      </BrowserRouter>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
